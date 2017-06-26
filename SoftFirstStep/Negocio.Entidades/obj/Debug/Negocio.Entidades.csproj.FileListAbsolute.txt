@@ -1,0 +1,4 @@
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\Negocio.Entidades\bin\Debug\Negocio.Entidades.dll
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\Negocio.Entidades\bin\Debug\Negocio.Entidades.pdb
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\Negocio.Entidades\obj\Debug\Negocio.Entidades.dll
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\Negocio.Entidades\obj\Debug\Negocio.Entidades.pdb

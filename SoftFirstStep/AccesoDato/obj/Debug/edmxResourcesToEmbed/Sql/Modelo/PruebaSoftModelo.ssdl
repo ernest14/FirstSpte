@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PruebaSoftModelo.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="PruebaSoftModeloStoreContainer">
+    <EntitySet Name="Catalogo" EntityType="PruebaSoftModelo.Store.Catalogo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Persona" EntityType="PruebaSoftModelo.Store.Persona" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PersonaNatural" EntityType="PruebaSoftModelo.Store.PersonaNatural" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Valor" EntityType="PruebaSoftModelo.Store.Valor" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_PersonaNatural_EstadoCivil" Association="PruebaSoftModelo.Store.FK_PersonaNatural_EstadoCivil">
+      <End Role="Valor" EntitySet="Valor" />
+      <End Role="PersonaNatural" EntitySet="PersonaNatural" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonaNatural_Genero" Association="PruebaSoftModelo.Store.FK_PersonaNatural_Genero">
+      <End Role="Valor" EntitySet="Valor" />
+      <End Role="PersonaNatural" EntitySet="PersonaNatural" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonaNatural_Ocupacion" Association="PruebaSoftModelo.Store.FK_PersonaNatural_Ocupacion">
+      <End Role="Valor" EntitySet="Valor" />
+      <End Role="PersonaNatural" EntitySet="PersonaNatural" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonaNatural_Persona" Association="PruebaSoftModelo.Store.FK_PersonaNatural_Persona">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="PersonaNatural" EntitySet="PersonaNatural" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Valor_Catalogo" Association="PruebaSoftModelo.Store.FK_Valor_Catalogo">
+      <End Role="Catalogo" EntitySet="Catalogo" />
+      <End Role="Valor" EntitySet="Valor" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Catalogo">
+    <Key>
+      <PropertyRef Name="IdCatalogo" />
+    </Key>
+    <Property Name="IdCatalogo" Type="smallint" Nullable="false" />
+    <Property Name="CodigoInterno" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EsReservado" Type="bit" Nullable="false" />
+    <Property Name="EstaActivo" Type="bit" Nullable="false" />
+    <Property Name="IdUsuarioCracion" Type="int" Nullable="false" />
+    <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="IdUsuarioModificacion" Type="int" />
+    <Property Name="FechaModificacion" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Persona">
+    <Key>
+      <PropertyRef Name="IdPersona" />
+    </Key>
+    <Property Name="IdPersona" Type="int" Nullable="false" />
+    <Property Name="IdTipoPersona" Type="int" Nullable="false" />
+    <Property Name="EstaActivo" Type="bit" Nullable="false" />
+    <Property Name="IdUsuarioCreacion" Type="int" Nullable="false" />
+    <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="IdUsuarioModificacion" Type="int" />
+    <Property Name="FechaModificacion" Type="datetime" />
+  </EntityType>
+  <EntityType Name="PersonaNatural">
+    <Key>
+      <PropertyRef Name="IdPersonaNatural" />
+    </Key>
+    <Property Name="IdPersonaNatural" Type="int" Nullable="false" />
+    <Property Name="IdPersona" Type="int" Nullable="false" />
+    <Property Name="IdGenero" Type="int" Nullable="false" />
+    <Property Name="IdEstadoCivil" Type="int" Nullable="false" />
+    <Property Name="IdOcupacion" Type="int" Nullable="false" />
+    <Property Name="PrimerNombre" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="SegundoNombre" Type="varchar" MaxLength="50" />
+    <Property Name="TercerNombre" Type="varchar" MaxLength="50" />
+    <Property Name="CuartoNombre" Type="varchar" MaxLength="50" />
+    <Property Name="PrimerApellido" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="SegundoApellido" Type="varchar" MaxLength="50" />
+    <Property Name="NombreCompleto" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="ApellidoDeCasada" Type="varchar" MaxLength="50" />
+    <Property Name="FechaNacimiento" Type="date" Nullable="false" />
+    <Property Name="EstaActivo" Type="bit" Nullable="false" />
+    <Property Name="IdUsuarioCreacion" Type="int" Nullable="false" />
+    <Property Name="FechaCreacion" Type="date" Nullable="false" />
+    <Property Name="IdUsuarioModificacion" Type="int" />
+    <Property Name="FechaModificacion" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Valor">
+    <Key>
+      <PropertyRef Name="IdValor" />
+    </Key>
+    <Property Name="IdValor" Type="int" Nullable="false" />
+    <Property Name="IdCatalogo" Type="smallint" Nullable="false" />
+    <Property Name="CodigoInterno" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ValorCatalogo" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Orden" Type="smallint" Nullable="false" />
+    <Property Name="EstaActivo" Type="bit" Nullable="false" />
+    <Property Name="IdUsuarioCreacion" Type="int" Nullable="false" />
+    <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="IdUsuarioModificacion" Type="int" />
+    <Property Name="FechaModificacion" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_PersonaNatural_EstadoCivil">
+    <End Role="Valor" Type="PruebaSoftModelo.Store.Valor" Multiplicity="1" />
+    <End Role="PersonaNatural" Type="PruebaSoftModelo.Store.PersonaNatural" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Valor">
+        <PropertyRef Name="IdValor" />
+      </Principal>
+      <Dependent Role="PersonaNatural">
+        <PropertyRef Name="IdEstadoCivil" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonaNatural_Genero">
+    <End Role="Valor" Type="PruebaSoftModelo.Store.Valor" Multiplicity="1" />
+    <End Role="PersonaNatural" Type="PruebaSoftModelo.Store.PersonaNatural" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Valor">
+        <PropertyRef Name="IdValor" />
+      </Principal>
+      <Dependent Role="PersonaNatural">
+        <PropertyRef Name="IdGenero" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonaNatural_Ocupacion">
+    <End Role="Valor" Type="PruebaSoftModelo.Store.Valor" Multiplicity="1" />
+    <End Role="PersonaNatural" Type="PruebaSoftModelo.Store.PersonaNatural" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Valor">
+        <PropertyRef Name="IdValor" />
+      </Principal>
+      <Dependent Role="PersonaNatural">
+        <PropertyRef Name="IdEstadoCivil" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonaNatural_Persona">
+    <End Role="Persona" Type="PruebaSoftModelo.Store.Persona" Multiplicity="1" />
+    <End Role="PersonaNatural" Type="PruebaSoftModelo.Store.PersonaNatural" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="IdPersona" />
+      </Principal>
+      <Dependent Role="PersonaNatural">
+        <PropertyRef Name="IdPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Valor_Catalogo">
+    <End Role="Catalogo" Type="PruebaSoftModelo.Store.Catalogo" Multiplicity="1" />
+    <End Role="Valor" Type="PruebaSoftModelo.Store.Valor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Catalogo">
+        <PropertyRef Name="IdCatalogo" />
+      </Principal>
+      <Dependent Role="Valor">
+        <PropertyRef Name="IdCatalogo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

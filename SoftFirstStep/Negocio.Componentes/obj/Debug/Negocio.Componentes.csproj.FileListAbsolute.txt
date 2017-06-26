@@ -1,0 +1,15 @@
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\Negocio.Componentes\obj\Debug\Negocio.Componentes.csprojResolveAssemblyReference.cache
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\Negocio.Componentes\bin\Debug\Negocio.Componentes.dll
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\Negocio.Componentes\bin\Debug\Negocio.Componentes.pdb
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\Negocio.Componentes\bin\Debug\AccesoDato.dll
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\Negocio.Componentes\bin\Debug\Negocio.Entidades.dll
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\Negocio.Componentes\bin\Debug\Utilidades.dll
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\Negocio.Componentes\bin\Debug\EntityFramework.dll
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\Negocio.Componentes\bin\Debug\AutoMapper.dll
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\Negocio.Componentes\bin\Debug\AccesoDato.pdb
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\Negocio.Componentes\bin\Debug\Negocio.Entidades.pdb
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\Negocio.Componentes\bin\Debug\Utilidades.pdb
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\Negocio.Componentes\bin\Debug\EntityFramework.xml
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\Negocio.Componentes\bin\Debug\AutoMapper.xml
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\Negocio.Componentes\obj\Debug\Negocio.Componentes.dll
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\Negocio.Componentes\obj\Debug\Negocio.Componentes.pdb

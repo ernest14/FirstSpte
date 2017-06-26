@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PruebaSoftModelo" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="PruebaSoftEntidades" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="PersonaNaturales" EntityType="PruebaSoftModelo.PersonaNatural" />
+    <EntitySet Name="Valores" EntityType="PruebaSoftModelo.Valor" />
+    <AssociationSet Name="FK_PersonaNatural_EstadoCivil" Association="PruebaSoftModelo.FK_PersonaNatural_EstadoCivil">
+      <End Role="Valor" EntitySet="Valores" />
+      <End Role="PersonaNatural" EntitySet="PersonaNaturales" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonaNatural_Genero" Association="PruebaSoftModelo.FK_PersonaNatural_Genero">
+      <End Role="Valor" EntitySet="Valores" />
+      <End Role="PersonaNatural" EntitySet="PersonaNaturales" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonaNatural_Ocupacion" Association="PruebaSoftModelo.FK_PersonaNatural_Ocupacion">
+      <End Role="Valor" EntitySet="Valores" />
+      <End Role="PersonaNatural" EntitySet="PersonaNaturales" />
+    </AssociationSet>
+    <EntitySet Name="Catalogos" EntityType="PruebaSoftModelo.Catalogo" />
+    <AssociationSet Name="FK_Valor_Catalogo" Association="PruebaSoftModelo.FK_Valor_Catalogo">
+      <End Role="Catalogo" EntitySet="Catalogos" />
+      <End Role="Valor" EntitySet="Valores" />
+    </AssociationSet>
+    <EntitySet Name="Personas" EntityType="PruebaSoftModelo.Persona" />
+    <AssociationSet Name="FK_PersonaNatural_Persona" Association="PruebaSoftModelo.FK_PersonaNatural_Persona">
+      <End Role="Persona" EntitySet="Personas" />
+      <End Role="PersonaNatural" EntitySet="PersonaNaturales" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="PersonaNatural">
+    <Key>
+      <PropertyRef Name="IdPersonaNatural" />
+    </Key>
+    <Property Name="IdPersonaNatural" Type="Int32" Nullable="false" />
+    <Property Name="IdPersona" Type="Int32" Nullable="false" />
+    <Property Name="IdGenero" Type="Int32" Nullable="false" />
+    <Property Name="IdEstadoCivil" Type="Int32" Nullable="false" />
+    <Property Name="IdOcupacion" Type="Int32" Nullable="false" />
+    <Property Name="PrimerNombre" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="SegundoNombre" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="TercerNombre" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CuartoNombre" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PrimerApellido" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="SegundoApellido" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="NombreCompleto" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="ApellidoDeCasada" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FechaNacimiento" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="EstaActivo" Type="Boolean" Nullable="false" />
+    <Property Name="IdUsuarioCreacion" Type="Int32" Nullable="false" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="IdUsuarioModificacion" Type="Int32" />
+    <Property Name="FechaModificacion" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Valor" Relationship="PruebaSoftModelo.FK_PersonaNatural_EstadoCivil" FromRole="PersonaNatural" ToRole="Valor" />
+    <NavigationProperty Name="Valor1" Relationship="PruebaSoftModelo.FK_PersonaNatural_Genero" FromRole="PersonaNatural" ToRole="Valor" />
+    <NavigationProperty Name="Valor2" Relationship="PruebaSoftModelo.FK_PersonaNatural_Ocupacion" FromRole="PersonaNatural" ToRole="Valor" />
+    <NavigationProperty Name="Persona" Relationship="PruebaSoftModelo.FK_PersonaNatural_Persona" FromRole="PersonaNatural" ToRole="Persona" />
+  </EntityType>
+  <EntityType Name="Valor">
+    <Key>
+      <PropertyRef Name="IdValor" />
+    </Key>
+    <Property Type="Int32" Name="IdValor" Nullable="false" />
+    <Property Type="Int16" Name="IdCatalogo" Nullable="false" />
+    <Property Type="String" Name="CodigoInterno" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ValorCatalogo" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="Orden" Nullable="false" />
+    <Property Type="Boolean" Name="EstaActivo" Nullable="false" />
+    <Property Type="Int32" Name="IdUsuarioCreacion" Nullable="false" />
+    <Property Type="DateTime" Name="FechaCreacion" Nullable="false" Precision="3" />
+    <Property Type="Int32" Name="IdUsuarioModificacion" />
+    <Property Type="DateTime" Name="FechaModificacion" Precision="3" />
+    <NavigationProperty Name="PersonaNatural" Relationship="PruebaSoftModelo.FK_PersonaNatural_EstadoCivil" FromRole="Valor" ToRole="PersonaNatural" />
+    <NavigationProperty Name="PersonaNatural1" Relationship="PruebaSoftModelo.FK_PersonaNatural_Genero" FromRole="Valor" ToRole="PersonaNatural" />
+    <NavigationProperty Name="PersonaNatural2" Relationship="PruebaSoftModelo.FK_PersonaNatural_Ocupacion" FromRole="Valor" ToRole="PersonaNatural" />
+    <NavigationProperty Name="Catalogo" Relationship="PruebaSoftModelo.FK_Valor_Catalogo" FromRole="Valor" ToRole="Catalogo" />
+  </EntityType>
+  <Association Name="FK_PersonaNatural_EstadoCivil">
+    <End Type="PruebaSoftModelo.Valor" Role="Valor" Multiplicity="1" />
+    <End Type="PruebaSoftModelo.PersonaNatural" Role="PersonaNatural" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Valor">
+        <PropertyRef Name="IdValor" />
+      </Principal>
+      <Dependent Role="PersonaNatural">
+        <PropertyRef Name="IdEstadoCivil" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonaNatural_Genero">
+    <End Type="PruebaSoftModelo.Valor" Role="Valor" Multiplicity="1" />
+    <End Type="PruebaSoftModelo.PersonaNatural" Role="PersonaNatural" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Valor">
+        <PropertyRef Name="IdValor" />
+      </Principal>
+      <Dependent Role="PersonaNatural">
+        <PropertyRef Name="IdGenero" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonaNatural_Ocupacion">
+    <End Type="PruebaSoftModelo.Valor" Role="Valor" Multiplicity="1" />
+    <End Type="PruebaSoftModelo.PersonaNatural" Role="PersonaNatural" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Valor">
+        <PropertyRef Name="IdValor" />
+      </Principal>
+      <Dependent Role="PersonaNatural">
+        <PropertyRef Name="IdEstadoCivil" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Catalogo">
+    <Key>
+      <PropertyRef Name="IdCatalogo" />
+    </Key>
+    <Property Type="Int16" Name="IdCatalogo" Nullable="false" />
+    <Property Type="String" Name="CodigoInterno" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="EsReservado" Nullable="false" />
+    <Property Type="Boolean" Name="EstaActivo" Nullable="false" />
+    <Property Type="Int32" Name="IdUsuarioCracion" Nullable="false" />
+    <Property Type="DateTime" Name="FechaCreacion" Nullable="false" Precision="3" />
+    <Property Type="Int32" Name="IdUsuarioModificacion" />
+    <Property Type="DateTime" Name="FechaModificacion" Precision="3" />
+    <NavigationProperty Name="Valor" Relationship="PruebaSoftModelo.FK_Valor_Catalogo" FromRole="Catalogo" ToRole="Valor" />
+  </EntityType>
+  <Association Name="FK_Valor_Catalogo">
+    <End Type="PruebaSoftModelo.Catalogo" Role="Catalogo" Multiplicity="1" />
+    <End Type="PruebaSoftModelo.Valor" Role="Valor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Catalogo">
+        <PropertyRef Name="IdCatalogo" />
+      </Principal>
+      <Dependent Role="Valor">
+        <PropertyRef Name="IdCatalogo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Persona">
+    <Key>
+      <PropertyRef Name="IdPersona" />
+    </Key>
+    <Property Type="Int32" Name="IdPersona" Nullable="false" />
+    <Property Type="Int32" Name="IdTipoPersona" Nullable="false" />
+    <Property Type="Boolean" Name="EstaActivo" Nullable="false" />
+    <Property Type="Int32" Name="IdUsuarioCreacion" Nullable="false" />
+    <Property Type="DateTime" Name="FechaCreacion" Nullable="false" Precision="3" />
+    <Property Type="Int32" Name="IdUsuarioModificacion" />
+    <Property Type="DateTime" Name="FechaModificacion" Precision="3" />
+    <NavigationProperty Name="PersonaNatural" Relationship="PruebaSoftModelo.FK_PersonaNatural_Persona" FromRole="Persona" ToRole="PersonaNatural" />
+  </EntityType>
+  <Association Name="FK_PersonaNatural_Persona">
+    <End Type="PruebaSoftModelo.Persona" Role="Persona" Multiplicity="1" />
+    <End Type="PruebaSoftModelo.PersonaNatural" Role="PersonaNatural" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="IdPersona" />
+      </Principal>
+      <Dependent Role="PersonaNatural">
+        <PropertyRef Name="IdPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

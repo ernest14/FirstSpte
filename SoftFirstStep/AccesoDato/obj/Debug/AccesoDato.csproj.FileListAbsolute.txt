@@ -1,0 +1,14 @@
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\AccesoDato\bin\Debug\AccesoDato.dll.config
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\AccesoDato\bin\Debug\AccesoDato.dll
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\AccesoDato\bin\Debug\AccesoDato.pdb
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\AccesoDato\bin\Debug\AutoMapper.dll
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\AccesoDato\bin\Debug\EntityFramework.dll
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\AccesoDato\bin\Debug\Negocio.Entidades.dll
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\AccesoDato\bin\Debug\Utilidades.dll
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\AccesoDato\bin\Debug\Negocio.Entidades.pdb
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\AccesoDato\bin\Debug\Utilidades.pdb
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\AccesoDato\bin\Debug\AutoMapper.xml
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\AccesoDato\bin\Debug\EntityFramework.xml
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\AccesoDato\obj\Debug\AccesoDato.csprojResolveAssemblyReference.cache
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\AccesoDato\obj\Debug\AccesoDato.dll
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\AccesoDato\obj\Debug\AccesoDato.pdb
