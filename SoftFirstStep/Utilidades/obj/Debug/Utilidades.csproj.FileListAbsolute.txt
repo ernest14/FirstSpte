@@ -1,0 +1,10 @@
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\Utilidades\bin\Debug\Utilidades.dll
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\Utilidades\bin\Debug\Utilidades.pdb
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\Utilidades\obj\Debug\Utilidades.Mensajes.MensajeBitacora.resources
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\Utilidades\obj\Debug\Utilidades.Mensajes.MensajeExcepcion.resources
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\Utilidades\obj\Debug\Utilidades.Mensajes.MensajeReglaNegocio.resources
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\Utilidades\obj\Debug\Utilidades.Mensajes.MensajeSistema.resources
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\Utilidades\obj\Debug\Utilidades.Mensajes.MensajeValidacion.resources
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\Utilidades\obj\Debug\Utilidades.csproj.GenerateResource.Cache
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\Utilidades\obj\Debug\Utilidades.dll
+C:\Users\emedrano.SIICAR2\Documents\Visual Studio 2012\Projects\SoftFirstStep\Utilidades\obj\Debug\Utilidades.pdb
